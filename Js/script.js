@@ -89,9 +89,9 @@ const video = ['youtube ','vimeo','rutube'],
       }
 
 function log(a,b,c){
-    console.log(a)
-    console.log(b)
-    console.log(c)    
+    console.log(a);
+    console.log(b);
+    console.log(c);   
 }
 const num = [2,5,7];
 log(...num);
