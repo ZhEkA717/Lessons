@@ -1,4 +1,7 @@
 // "use strict";
+
+// 22 Передача по ссылке или по значению, Spread оператор (ES6-ES9)
+
 // // при создания копии объекта создается ссылка на данный объект
 // const Obj={ 
 //     a: 1,
@@ -71,27 +74,43 @@
 // console.log(copyObj);
 
 // создание копии массива
-const oldArr = ['a','b','c'];
-const newArr = oldArr.slice();
+// const oldArr = ['a','b','c'];
+// const newArr = oldArr.slice();
 
-newArr.push('sdfsdfdsf');
+// newArr.push('sdfsdfdsf');
 
-console.log(oldArr);
-console.log(newArr);
+// console.log(oldArr);
+// console.log(newArr);
 
-// разделяем массив на отдельные элементы
-const video = ['youtube ','vimeo','rutube'],
-      blogs = ['wordpress','livejournal','blogger'],
-      internet =[...video,...blogs,'vk','instagram','facebook'];
+// // разделяем массив на отдельные элементы
+// const video = ['youtube ','vimeo','rutube'],
+//       blogs = ['wordpress','livejournal','blogger'],
+//       internet =[...video,...blogs,'vk','instagram','facebook'];
 
-      for( let i=0;i<internet.length;i++){
-          console.log(`${i+1}:${internet[i]}`);
-      }
+//       for( let i=0;i<internet.length;i++){
+//           console.log(`${i+1}:${internet[i]}`);
+//       }
 
-function log(a,b,c){
-    console.log(a);
-    console.log(b);
-    console.log(c);   
-}
-const num = [2,5,7];
-log(...num);
+// function log(a,b,c){
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);   
+// }
+// const num = [2,5,7];
+// log(...num);
+
+const array = ["a","b"];
+
+const newAarray = [...array];
+
+console.log(newAarray);
+
+const q = {
+    one: 1,
+    two: 2
+};
+
+const newObj = {...q};
+
+console.log(q);
+
