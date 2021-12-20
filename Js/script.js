@@ -99,18 +99,59 @@
 // const num = [2,5,7];
 // log(...num);
 
-const array = ["a","b"];
+// const array = ["a","b"];
 
-const newAarray = [...array];
+// const newAarray = [...array];
 
-console.log(newAarray);
+// console.log(newAarray);
 
-const q = {
-    one: 1,
-    two: 2
-};
+// const q = {
+//     one: 1,
+//     two: 2
+// };
 
-const newObj = {...q};
+// const newObj = {...q};
 
-console.log(q);
+// console.log(q);
 
+// 23. Основы ООП, прототипно-ориентированное наследование
+
+// let str ="some";
+
+// let strObj = new String(str);
+
+// console.log(typeof(str));
+// console.log(typeof(strObj));
+
+// console.dir([1,2,3]);
+
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function(){
+        console.log("Hello!");
+    }
+}
+
+// const jonh = {
+//     health: 100
+// }
+
+// // jonh.__proto__ = soldier;// устаревший вариант
+
+// Object.setPrototypeOf(jonh,soldier);
+// // устанавливаем прототип для john от soldier
+
+// console.log(jonh);
+// console.log(jonh.armor);
+// jonh.sayHello();
+
+// const jonh = Object.create(soldier);
+// // создаем новый объект john,который будет прототипно
+// // наследоваться от soldier,для того ,чтобы john имел
+// // доступ к свойствам и методам soldier 
+
+// console.log(jonh);
+// console.log(jonh.health);
+// console.log(jonh.armor);
+// jonh.sayHello();
