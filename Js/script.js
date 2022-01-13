@@ -195,42 +195,78 @@
 
 // наследованиеееееееееееееееееееееееееееееееееееееееееееееееееее
 
-function Animal() {
-    this.eyes = 2;
-}
+// function Animal() {
+//     this.eyes = 2;
+// }
 
-Animal.prototype.showEyes = function () {
-    console.log(`Eyes: ${this.eyes}`);
-}
-Animal.prototype.setLegs = function (legs) {
-    this.legs=legs;
-}
-Animal.prototype.showLegs = function () {
-    console.log(`Legs: ${this.legs}`);
-}
+// Animal.prototype.showEyes = function () {
+//     console.log(`Eyes: ${this.eyes}`);
+// }
+// Animal.prototype.setLegs = function (legs) {
+//     this.legs=legs;
+// }
+// Animal.prototype.showLegs = function () {
+//     console.log(`Legs: ${this.legs}`);
+// }
 
-function Tiger(){
-    Animal.call(this);
-    this.setLegs(4);
-    this.roar=function(){
-        console.log('Я тигр и я реву!');
+// function Tiger(){
+//     Animal.call(this);
+//     this.setLegs(4);
+//     this.roar=function(){
+//         console.log('Я тигр и я реву!');
+//     }
+// }
+
+// Tiger.prototype = Object.create(Animal.prototype);
+// Tiger.prototype.constructor=Tiger;
+
+// function Batterfly(){
+//     Animal.call(this);
+//     this.setLegs(6);
+//     this.fly=function(){
+//         console.log('Я бабочка и я летаю!');
+//     }
+// }
+
+// Batterfly.prototype = Object.create(Animal.prototype);
+// Batterfly.prototype.constructor=Batterfly;
+
+
+
+class Animal {
+    constructor(){
+        this.eyes = 2;
+    }
+    showEyes(){
+        console.log(`Eyes: ${this.eyes}`);
+    }
+    setLegs(legs){
+        this.legs = legs;
+    }
+    showLegs(){
+        console.log(`Legs: ${this.legs}`);
     }
 }
 
-Tiger.prototype = Object.create(Animal.prototype);
-Tiger.prototype.constructor=Tiger;
+class Tiger extends Animal{
+    constructor(){
+        super();
+        this.setLegs(4);
+    }
+    roar(){
+        console.log('Я тигр и я реву!')
+    }
+}
 
-function Batterfly(){
-    Animal.call(this);
-    this.setLegs(6);
-    this.fly=function(){
+class Batterfly extends Animal{
+    constructor(){
+        super();
+        this.setLegs(6);
+    }
+    fly(){
         console.log('Я бабочка и я летаю!');
     }
 }
-
-Batterfly.prototype = Object.create(Animal.prototype);
-Batterfly.prototype.constructor=Batterfly;
-
 
 let tigerEvgeniy = new Tiger;
 
@@ -244,4 +280,3 @@ let butterflyDashka = new Batterfly;
 butterflyDashka.fly();
 butterflyDashka.showEyes();
 butterflyDashka.showLegs();
-
