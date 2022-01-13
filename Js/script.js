@@ -28,7 +28,7 @@
 //     for (key in mainObj){
 //         objCopy[key]=mainObj[key];
 //     }
-    
+
 //     return objCopy;
 // }
 
@@ -155,3 +155,93 @@
 // console.log(jonh.health);
 // console.log(jonh.armor);
 // jonh.sayHello();
+
+// function Car(name1){
+//     let self=this;
+//     self.name=name1;
+//     let wheels=4;
+//     function howMatchWhels(){
+//         console.log(`у ${self.name} ${wheels} колеса`)
+//     }
+//     self.howM=function(){
+//         howMatchWhels();
+//     }
+// }
+
+// Car.prototype.f=function(){
+//     console.log('ура ура ура');
+// }
+
+// let car1 = new Car('audi');
+// car1.howM();
+// car1.f(); 
+
+// function Class1(num){
+//     this.value=num;
+// }
+
+// Class1.prototype.f1=function(){
+//     console.log(this.value);
+// }
+
+// let obj1 = new Class1(1);
+// let obj2 = new Class1(2);
+
+// obj1.f1();
+// obj2.f1();
+
+// console.log(obj1.f1===obj2.f1);
+
+
+// наследованиеееееееееееееееееееееееееееееееееееееееееееееееееее
+
+function Animal() {
+    this.eyes = 2;
+}
+
+Animal.prototype.showEyes = function () {
+    console.log(`Eyes: ${this.eyes}`);
+}
+Animal.prototype.setLegs = function (legs) {
+    this.legs=legs;
+}
+Animal.prototype.showLegs = function () {
+    console.log(`Legs: ${this.legs}`);
+}
+
+function Tiger(){
+    Animal.call(this);
+    this.setLegs(4);
+    this.roar=function(){
+        console.log('Я тигр и я реву!');
+    }
+}
+
+Tiger.prototype = Object.create(Animal.prototype);
+Tiger.prototype.constructor=Tiger;
+
+function Batterfly(){
+    Animal.call(this);
+    this.setLegs(6);
+    this.fly=function(){
+        console.log('Я бабочка и я летаю!');
+    }
+}
+
+Batterfly.prototype = Object.create(Animal.prototype);
+Batterfly.prototype.constructor=Batterfly;
+
+
+let tigerEvgeniy = new Tiger;
+
+tigerEvgeniy.roar();
+tigerEvgeniy.showEyes();
+tigerEvgeniy.showLegs();
+
+
+let butterflyDashka = new Batterfly;
+
+butterflyDashka.fly();
+butterflyDashka.showEyes();
+butterflyDashka.showLegs();
+
