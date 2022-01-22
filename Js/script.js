@@ -233,50 +233,66 @@
 
 
 
-class Animal {
-    constructor(){
-        this.eyes = 2;
-    }
-    showEyes(){
-        console.log(`Eyes: ${this.eyes}`);
-    }
-    setLegs(legs){
-        this.legs = legs;
-    }
-    showLegs(){
-        console.log(`Legs: ${this.legs}`);
-    }
-}
+// class Animal {
+//     constructor(){
+//         this.eyes = 2;
+//     }
+//     showEyes(){
+//         console.log(`Eyes: ${this.eyes}`);
+//     }
+//     setLegs(legs){
+//         this.legs = legs;
+//     }
+//     showLegs(){
+//         console.log(`Legs: ${this.legs}`);
+//     }
+// }
 
-class Tiger extends Animal{
-    constructor(){
-        super();
-        this.setLegs(4);
-    }
-    roar(){
-        console.log('Я тигр и я реву!')
-    }
-}
+// class Tiger extends Animal{
+//     constructor(){
+//         super();
+//         this.setLegs(4);
+//     }
+//     roar(){
+//         console.log('Я тигр и я реву!')
+//     }
+// }
 
-class Batterfly extends Animal{
-    constructor(){
-        super();
-        this.setLegs(6);
-    }
-    fly(){
-        console.log('Я бабочка и я летаю!');
-    }
-}
+// class Batterfly extends Animal{
+//     constructor(){
+//         super();
+//         this.setLegs(6);
+//     }
+//     fly(){
+//         console.log('Я бабочка и я летаю!');
+//     }
+// }
 
-let tigerEvgeniy = new Tiger;
+// let tigerEvgeniy = new Tiger;
 
-tigerEvgeniy.roar();
-tigerEvgeniy.showEyes();
-tigerEvgeniy.showLegs();
+// tigerEvgeniy.roar();
+// tigerEvgeniy.showEyes();
+// tigerEvgeniy.showLegs();
 
 
-let butterflyDashka = new Batterfly;
+// let butterflyDashka = new Batterfly;
 
-butterflyDashka.fly();
-butterflyDashka.showEyes();
-butterflyDashka.showLegs();
+// butterflyDashka.fly();
+// butterflyDashka.showEyes();
+// butterflyDashka.showLegs();
+
+window.addEventListener('swipeLeft', function (EO) {
+    EO = EO || window.event;
+    EO.preventDefault();
+    alert('swipeLeft');
+})
+window.addEventListener('tap', function (EO) {
+    EO = EO || window.event;
+    EO.preventDefault();
+    alert('tap');
+})
+window.addEventListener('swipeUp', function (EO) {
+    EO = EO || window.event;
+    EO.preventDefault();
+    alert('swipeUp');
+})
