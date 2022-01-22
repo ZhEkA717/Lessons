@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
 </head>
+
 <body>
     <script src="Js/script.js"></script>
+
+    <script src="node_modules/zepto/dist/zepto.js"></script>
+    <script src="node_modules/zepto/src/touch.js"></script> // introduction module
+    <script>
+        $(function () {
+            $(document).tap(function () {
+                alert("Click on the screen.");
+            });
+            $(document).doubleTap(function () {
+                alert("Double-click on the screen.");
+            });
+            $(document).longTap(function () {
+                alert("Long press more than 750ms");
+            });
+            $(document).swipe(function () {
+                alert("Scratched");
+            });
+            $(document).swipeLeft(function () {
+                alert("Left scratched");
+            });
+            $(document).swipeUp(function () {
+                alert("On scratched");
+            });
+            $(document).swipeRight(function () {
+                alert("swipe right");
+            });
+            
+        });
+    </script>
+
+
 </body>
+
 </html>
